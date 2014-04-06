@@ -1,0 +1,54 @@
+" ==VimperatorColorSchema==
+" name: Base16 <%= @scheme %> Schema
+" ==/VimperatorColorSchema==
+" 
+
+hi Hint font-family: monospace; font-size: 15px; font-weight: normal; color: #<%= @base["08"]["hex"] %>; background-color: #<%= @base["00"]["hex"] %>; border-color: #<%= @base["04"]["hex"] %>; border-width: 0px; border-style: solid; padding: 0px 5px 0px 5px; text-transform: uppercase;
+hi HintElem background-color: #<%= @base["0D"]["hex"] %>; color: #<%= @base["00"]["hex"] %>;
+hi HintActive background-color: #<%= @base["0E"]["hex"] %>; color: #<%= @base["00"]["hex"] %>;
+hi -append Hint         background-color: rgba(<%=
+  @base["0E"]["rgb"][0]
+%>, <%=
+  @base["0E"]["rgb"][1]
+%>, <%=
+  @base["0E"]["rgb"][2]
+%>, 0.7); border: 1px solid #fdf6e3; -moz-border-radius: 4px; -moz-box-shadow: 0px 0px 1px black;
+hi -append HintElem     text-decoration: none; -moz-border-radius: 4px; -moz-box-shadow: 0 0 2px #<%= @base["00"]["hex"] %>;
+hi -append HintActive   text-decoration: none; -moz-border-radius: 4px; -moz-box-shadow: 0 0 2px #<%= @base["00"]["hex"] %>;
+
+hi StatusLine     color: #<%= @base["00"]["hex"] %>; background: #<%= @base["00"]["hex"] %>; font-weight: normal; font-size: 8pt;
+
+hi Normal     color:  #<%= @base["05"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>; font-size: 8pt; opacity: 0.9;
+hi CmdLine    color:  #<%= @base["05"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>; font-size: 8pt;
+hi InfoMsg    color:  #<%= @base["05"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>; font-size: 8pt;
+hi ModeMsg    color:  #<%= @base["05"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>; font-size: 8pt;
+hi MoreMsg    color:  #<%= @base["0B"]["hex"] %>; background: #<%= @base["00"]["hex"] %>;
+hi LineNr   color:  #<%= @base["08"]["hex"] %>; background: #<%= @base["00"]["hex"] %>; font-size: 8pt;
+hi Question   color: #<%= @base["0A"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>;  font-size: 8pt;
+hi WarningMsg   color: #<%= @base["08"]["hex"] %>;  background: #<%= @base["00"]["hex"] %>;  font-size: 8pt;
+hi ErrorMsg   color: #<%= @base["00"]["hex"] %>;  background: red;  font-size: 8pt;
+hi NonText    background: #<%= @base["00"]["hex"] %>;
+hi Null     color: CornflowerBlue;
+hi Tag      color: CornflowerBlue;
+hi Number   color: CornflowerBlue;
+
+hi CompTitle    background: #1c1c1c;
+hi CompTitle>*  color: #<%= @base["09"]["hex"] %>; border-bottom: 1px solid #3c3c3f; padding: 1px 0.5ex;
+hi CompItem[selected] color: cyan;  background: #333;
+hi CompDesc   color: #<%= @base["0F"]["hex"] %>;
+
+hi Title    color:  #<%= @base["00"]["hex"] %>;
+hi Indicator    color:  #<%= @base["0A"]["hex"] %>;
+hi String   color:  #<%= @base["00"]["hex"] %>;
+hi Number   color:  #<%= @base["00"]["hex"] %>;
+hi Object   color: #<%= @base["0C"]["hex"] %>;
+hi Function   color:  #<%= @base["0D"]["hex"] %>;
+hi URL    color:  #<%= @base["0B"]["hex"] %>;
+
+hi TabNumber  color: #<%= @base["00"]["hex"] %>; font-weight: bold; font-size:10pt;
+
+style -name tab chrome://* <<EOM
+  .tabbrowser-strip {
+    background                         : #<%= @base["00"]["hex"] %> !important;
+  }
+EOM

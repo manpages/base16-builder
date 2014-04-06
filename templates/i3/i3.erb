@@ -1,0 +1,20 @@
+<%
+# i3 template
+# Jonn Mostovoy (http://j.memorici.de)
+
+%># Base16 <%= @scheme %>
+# Scheme: <%= @author %>
+
+bar {
+  colors {
+    background #<%= @base["00"]["hex"] %>
+    focused_workspace #<%= @base["01"]["hex"] %> #<%= @base["01"]["hex"] %> #<%= @base["00"]["hex"] %>
+    inactive_workspace #<%= @base["00"]["hex"] %> #<%= @base["00"]["hex"] %> #<%= @base["01"]["hex"] %>
+    urgent_workspace #<%= @base["00"]["hex"] %> #<%= @base["00"]["hex"] %> #<%= @base["08"]["hex"] %>
+  }
+}
+
+client.focused #<%= @base["01"]["hex"] %> #<%= @base["01"]["hex"] %> #<%= @base["04"]["hex"] %> #<%= @base["03"]["hex"] %>
+client.focused_inactive #<%= @base["00"]["hex"] %> #<%= @base["00"]["hex"] %> #<%= @base["01"]["hex"] %> #<%= @base["03"]["hex"] %>
+client.unfocused #<%= @base["00"]["hex"] %> #<%= @base["00"]["hex"] %> #<%= @base["01"]["hex"] %> #<%= @base["03"]["hex"] %>
+client.urgent #<%= @base["01"]["hex"] %> #<%= @base["01"]["hex"] %> #<%= @base["0B"]["hex"] %> #<%= @base["03"]["hex"] %>
